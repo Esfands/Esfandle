@@ -1,8 +1,13 @@
 import { Button } from '@mui/material';
+import { KeyValue } from './KeyValue'
 
-const Key = () => {
+type Props = {
+    value: KeyValue
+};
+
+const Key = ({ value }: Props) => {
     return (
-        <Button variant="outlined">A</Button>
+        <Button variant="outlined">{value}</Button>
     )
 };
 

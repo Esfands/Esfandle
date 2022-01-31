@@ -1,5 +1,5 @@
 import React from 'react';
-import GameGrid from '../src/components/grid/Grid';
+import GameGrid from '../src/components/grid/GameGrid';
 import Keyboard from './components/keyboard/Keyboard';
 import Header from '../src/components/Header';
 import './App.css';
