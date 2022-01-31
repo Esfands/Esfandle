@@ -7,7 +7,7 @@ type Props = {
 
 const Key = ({ value }: Props) => {
     return (
-        <Button variant="outlined">{value}</Button>
+        <Button variant="outlined" sx={{height: "58px", margin: "0 6px 6px 0"}}>{value}</Button>
     )
 };
 

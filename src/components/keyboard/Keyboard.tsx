@@ -2,7 +2,7 @@ import Key from './Key';
 
 const Keyboard = () => {
     return(
-        <div>
+        <div style={{marginTop:"20px"}}>
             <div>
                 <Key value="Q" />
                 <Key value="W" />
@@ -27,6 +27,7 @@ const Keyboard = () => {
                 <Key value="L" />
             </div>
             <div>
+                <Key value="Enter" />
                 <Key value="Z" />
                 <Key value="X" />
                 <Key value="C" />
@@ -34,6 +35,7 @@ const Keyboard = () => {
                 <Key value="B" />
                 <Key value="N" />
                 <Key value="M" />
+                <Key value="Delete" />
             </div>
         </div>
     )

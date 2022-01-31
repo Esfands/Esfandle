@@ -26,4 +26,6 @@ export type KeyValue =
   | "N"
   | "M"
   | "I"
-  | "O";
+  | "O"
+  | "Enter"
+  | "Delete";
