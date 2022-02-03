@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <GameGrid guess={guess} />
+      <GameGrid guess={guess} totalGuesses={totalGuesses} />
       <Keyboard onEnteredChar={onEnteredChar} />
     </div>
   );
