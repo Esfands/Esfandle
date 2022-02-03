@@ -8,7 +8,7 @@ type Props = {
 
 const GameGrid = ({ guess, totalGuesses }: Props) => {
 
-  const emptyRows = Array.from(Array(6 - totalGuesses.length));
+  const emptyRows = Array.from(Array(5 - totalGuesses.length));
 
   return (
     <Box sx={{ display:"grid", justifyContent:"center", alignItems:"center"}}>
@@ -18,7 +18,9 @@ const GameGrid = ({ guess, totalGuesses }: Props) => {
             <Row guess={guessed}/>
           </Grid>
         ))}
-        {/*write current guess into row between the two*/}
+        <Grid container item spacing={1} justifyContent="center" alignItems="center">
+          <Row guess={guess}/>
+        </Grid>
         {emptyRows.map((_, i) => (
           <Grid container item spacing={1} justifyContent="center" alignItems="center">
             <Row guess=''/>
