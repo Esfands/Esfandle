@@ -1,12 +1,17 @@
 import Key from './Key';
 import { KeyValue } from './KeyValue';
 
-const onKeyClick = (value: KeyValue) => {
-    console.log(value);
+type Props = {
+    onEnteredChar: (value: string) => void
 }
 
 
-const Keyboard = () => {
+const Keyboard = ({ onEnteredChar }: Props) => {
+
+    const onKeyClick = (value: KeyValue) => {
+        onEnteredChar(value);
+    }
+
     return(
         <div style={{marginTop:"20px"}}>
             <div>

@@ -12,21 +12,25 @@ function App() {
   const [gameWon, setGameWon] = useState(false);
 
 
-
-
-
-
-
-
-
-
+  const onEnteredChar = (value: string) => {
+    if (value === 'Enter') {
+      //submit guess
+    } else if (value === 'Delete') {
+      if (guess !== '') { 
+        setGuess(guess.slice(0, -1))
+      }  
+    } else {
+      setGuess(`${guess}${value}`);
+    }
+    console.log(guess);
+  }
 
 
   return (
     <div className="App">
       <Header/>
-      <GameGrid/>
-      <Keyboard/>
+      <GameGrid guess={guess} />
+      <Keyboard onEnteredChar={onEnteredChar} />
     </div>
   );
 }
