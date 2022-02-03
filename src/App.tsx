@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react';
 import GameGrid from '../src/components/grid/GameGrid';
 import Keyboard from './components/keyboard/Keyboard';
