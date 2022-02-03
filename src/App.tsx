@@ -13,13 +13,14 @@ function App() {
 
 
   const onEnteredChar = (value: string) => {
-    if (value === 'Enter') {
-      //submit guess
+    if (guess.length === 5 && value === 'Enter') {
+      setTotalGuesses([...totalGuesses, guess])
+      setGuess('');
     } else if (value === 'Delete') {
       if (guess !== '') { 
         setGuess(guess.slice(0, -1))
       }  
-    } else {
+    } else if (value !== 'Enter') {
       setGuess(`${guess}${value}`);
     }
     console.log(guess);

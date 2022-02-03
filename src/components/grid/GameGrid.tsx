@@ -13,15 +13,15 @@ const GameGrid = ({ guess, totalGuesses }: Props) => {
   return (
     <Box sx={{ display:"grid", justifyContent:"center", alignItems:"center"}}>
       <Grid container spacing={1} justifyContent="center" alignItems="center">
-        {totalGuesses.map((_, i) => (
+        {totalGuesses.map((guessed, i) => (
           <Grid container item spacing={1} justifyContent="center" alignItems="center">
-            <Row guess={guess}/>
+            <Row guess={guessed}/>
           </Grid>
         ))}
-        //current guess? also should prevent empty rows from rendering if on final guess
+        {/*write current guess into row between the two*/}
         {emptyRows.map((_, i) => (
           <Grid container item spacing={1} justifyContent="center" alignItems="center">
-            <Row guess={guess}/>
+            <Row guess=''/>
           </Grid>
         ))}
       </Grid>
