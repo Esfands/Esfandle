@@ -15,15 +15,15 @@ const GameGrid = ({ guess, totalGuesses }: Props) => {
       <Grid container spacing={1} justifyContent="center" alignItems="center">
         {totalGuesses.map((guessed, i) => (
           <Grid container item spacing={1} justifyContent="center" alignItems="center">
-            <Row guess={guessed}/>
+            <Row guess={guessed} key={i} />
           </Grid>
         ))}
         <Grid container item spacing={1} justifyContent="center" alignItems="center">
-          <Row guess={guess}/>
+          <Row guess={guess} key={totalGuesses.length + 1}/>
         </Grid>
         {emptyRows.map((_, i) => (
           <Grid container item spacing={1} justifyContent="center" alignItems="center">
-            <Row guess=''/>
+            <Row guess='' key={i}/>
           </Grid>
         ))}
       </Grid>

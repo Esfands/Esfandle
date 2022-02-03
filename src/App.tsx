@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import GameGrid from '../src/components/grid/GameGrid';
 import Keyboard from './components/keyboard/Keyboard';
 import Header from '../src/components/Header';
@@ -14,6 +14,10 @@ function App() {
 
   const onEnteredChar = (value: string) => {
     if (guess.length === 5 && value === 'Enter') {
+      if (guess.toLowerCase() === 'frick') {
+        // we won
+        setGameWon(true);
+      }
       setTotalGuesses([...totalGuesses, guess])
       setGuess('');
     } else if (value === 'Delete') {
@@ -26,6 +30,12 @@ function App() {
     console.log(guess);
   }
 
+  useEffect(() => {
+    if (gameWon) {
+      //placeholder 
+      alert('YOU WON!!!!!');
+    }
+  }, [gameWon])
 
   return (
     <div className="App">
